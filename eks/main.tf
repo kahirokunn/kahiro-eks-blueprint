@@ -23,6 +23,14 @@ terraform {
   }
 }
 
+resource "null_resource" "show-terraform-cloud-global-ip" {
+  provisioner "local-exec" {
+    command = <<EOT
+    curl httpbin.org/ip
+    EOT
+  }
+}
+
 data "terraform_remote_state" "iam" {
   backend = "remote"
 
