@@ -1,0 +1,17 @@
+redis-ha:
+  enabled: true
+
+controller:
+  enableStatefulSet: true
+
+server:
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+  extraArgs:
+    - --insecure
+
+repoServer:
+  autoscaling:
+    enabled: true
+    minReplicas: 2

@@ -196,6 +196,7 @@ module "eks_blueprints_kubernetes_addons" {
   enable_argocd         = true
   argocd_helm_config = {
     version = "4.9.14"
+    values = [templatefile("${path.module}/argocd-values.yaml", {})]
   }
 
   enable_aws_load_balancer_controller = true
