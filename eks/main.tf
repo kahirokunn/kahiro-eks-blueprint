@@ -177,7 +177,7 @@ module "eks_blueprints" {
 }
 
 module "eks_blueprints_kubernetes_addons" {
-  source = "github.com/kahirokunn/terraform-aws-eks-blueprints//modules/kubernetes-addons?ref=v0.0.11"
+  source = "github.com/kahirokunn/terraform-aws-eks-blueprints//modules/kubernetes-addons?ref=v0.0.12"
 
   eks_cluster_id     = module.eks_blueprints.eks_cluster_id
   eks_cluster_domain = var.domain
